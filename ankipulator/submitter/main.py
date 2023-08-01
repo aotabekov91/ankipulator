@@ -5,7 +5,7 @@ import hashlib
 import anki.sync
 import urllib.request
 
-from plugin.plug import Plug
+from plug import Plug
 from anki.storage import Collection
 
 class MediaType(enum.Enum):
