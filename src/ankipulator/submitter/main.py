@@ -103,7 +103,7 @@ class Submitter(Plug):
             self.deleteMediaFile(filename)
 
 
-        collection=Collection(self.path)
+        collection=Collection(self.collection_path)
         media=collection.media
         r=media.writeData(filename, mediaData)
         collection.autosave()
@@ -111,7 +111,7 @@ class Submitter(Plug):
 
     def deleteMediaFile(self, filename):
 
-        collection=Collection(self.path)
+        collection=Collection(self.collection_path)
         media = collection.media
         try:
             media.syncDelete(filename)
@@ -121,7 +121,7 @@ class Submitter(Plug):
 
     def addNote(self, note):
 
-        collection=Collection(self.path) 
+        collection=Collection(self.collection_path) 
         model = collection.models.byName(note['modelName'])
         deck = collection.decks.byName(note['deckName'])
         collection.decks.set_current(deck['id'])
@@ -231,7 +231,7 @@ class Submitter(Plug):
 
     def getModels(self):
 
-        c=Collection(self.path)
+        c=Collection(self.collection_path)
         models=c.models.all()
         data={}
         for m in models:
@@ -242,7 +242,7 @@ class Submitter(Plug):
 
     def getDecks(self):
 
-        c=Collection(self.path)
+        c=Collection(self.collection_path)
         decks=c.decks.all_names()
         c.close()
         return decks

@@ -1,0 +1,22 @@
+[build-system]
+
+requires=["setuptools"]
+build-backend="setuptools.build_meta"
+
+[project]
+
+name='ankipulator'
+version='0.0.1'
+description="Card submitter to Anki"
+dependencies=[
+	"plug==0.0.1",
+	"anki==2.1.64"
+	]
+
+[tools.setuptools.project-data]
+
+"*"=["*"]
+
+[tools.setuptools.packages.find]
+
+where=["src"]
