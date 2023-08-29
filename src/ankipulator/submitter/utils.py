@@ -3,13 +3,12 @@ import urllib.request
 
 import os
 import sys
+import time
 
-import anki
-import anki.sync
 import aqt
 import enum
-
-import time
+import anki
+import anki.sync
 
 #
 # Utilities

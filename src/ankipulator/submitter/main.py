@@ -1,3 +1,4 @@
+import os
 import json
 import enum
 import base64
@@ -16,6 +17,11 @@ class MediaType(enum.Enum):
 
 
 class Submitter(Plug):
+
+    def setSettings(self):
+
+        super().setSettings()
+        self.collection_path=os.path.expanduser(self.collection_path)
 
     def isNoteDuplicateOrEmptyInScope(
 
@@ -243,7 +249,7 @@ class Submitter(Plug):
     def getDecks(self):
 
         c=Collection(self.collection_path)
-        decks=c.decks.all_names()
+        decks=c.decks.all_names_and_ids()
         c.close()
         return decks
 
