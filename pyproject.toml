@@ -2,7 +2,7 @@
 name = "Ankipulator"
 version = "0.0.1"
 description = "An Anki helper"
-authors = ["A O<you@example.com>"]
+authors = ["A O <adhambek.otabekov.post@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
