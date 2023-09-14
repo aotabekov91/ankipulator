@@ -1,22 +1,15 @@
+[tool.poetry]
+name = "Ankipulator"
+version = "0.0.1"
+description = "An Anki helper"
+authors = ["A O<you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+anki = "^2.1.64"
+plug = {git = "https://github.com/aotabekov91/plug", branch='main'}
+
 [build-system]
-
-requires=["setuptools"]
-build-backend="setuptools.build_meta"
-
-[project]
-
-name='ankipulator'
-version='0.0.1'
-description="Card submitter to Anki"
-dependencies=[
-	"plug==0.0.1",
-	"anki==2.1.64"
-	]
-
-[tools.setuptools.project-data]
-
-"*"=["*"]
-
-[tools.setuptools.packages.find]
-
-where=["src"]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
