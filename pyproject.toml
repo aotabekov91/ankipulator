@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 anki = "^2.1.64"
-plug = {git = "https://github.com/aotabekov91/plug", branch='main'}
+plug = {path = "/home/adam/code/plug", develop = true}
 
 [build-system]
 requires = ["poetry-core"]
